@@ -1,0 +1,122 @@
+$susy: (
+  global-box-sizing: border-box,
+  columns: 24,
+  gutters: 2,
+  gutter-position: after
+);
+
+section {
+  @include container; //susy
+  @include clearfix;
+  margin: 1em 0;
+}
+
+@mixin marginBottom {margin-bottom: 1em;}
+
+//spans of 24 Bsp. (grid15 gridM24last) (grid9last gridM24last)
+@for $i from 1 through 24 {
+  .grid-#{$i} {
+    @include span($i);
+  }
+
+  .grid-#{$i}-last {
+    @include span($i omega);
+  }
+  
+  @include breakpoint(tablet) {
+    .gridM-#{$i} {
+      @include span($i);
+      @include marginBottom;
+    }
+    .gridM-#{$i}-last {
+      @include span($i omega);
+      @include marginBottom;
+    }
+  }
+  
+  @include breakpoint(mobile) {
+    .gridS-#{$i} {
+      @include span($i);
+    }
+    .gridS-#{$i}-last {
+      @include span($i last);
+    }
+  }
+  
+  @include breakpoint(mobileS) {
+    .gridXS-#{$i} {
+      @include span($i);
+    }
+    .gridXS-#{$i}-last {
+      @include span($i last);
+    }
+  }
+}
+
+.grid-2th {
+  @include span(12);
+  &:nth-of-type(2n) {@include span(12 last);}
+  
+  @include breakpoint(tablet) {
+    &:nth-of-type(n) {@include span(24 last);}
+    @include marginBottom;
+  }
+}
+
+.grid-3th {
+  @include span(8);
+  &:nth-of-type(3n) {@include span(8 last);}
+  
+  @include breakpoint(mobileS) {
+    &:nth-of-type(n) {@include span(24 last);}
+    @include marginBottom;
+  }
+}
+
+.grid-4th {
+  @include span(6);
+  &:nth-of-type(4n) {@include span(6 last);}
+  
+  @include breakpoint(tablet) {
+    @include span(12);
+    &:nth-of-type(2n) {@include span(12 last);}
+    @include marginBottom;
+  }
+  @include breakpoint(mobileS) {
+    &:nth-of-type(n) {@include span(24 last);}
+    @include marginBottom;
+  }
+}
+
+.grid-6th {
+  @include span(4);
+  &:nth-of-type(6n) {@include span(4 last);}
+  
+  @include breakpoint(tablet) {
+    @include span(8);
+    &:nth-of-type(3n) {@include span(8 last);}
+    @include marginBottom;
+  }
+  @include breakpoint(mobileS) {
+    &:nth-of-type(2n-1) {@include span(12);}
+    &:nth-of-type(2n) {@include span(12 last);}
+    @include marginBottom;
+  }
+}
+
+.grid-8th {
+  @include span(3);
+  &:nth-of-type(8n) {@include span(3 last);}
+  
+  @include breakpoint(tablet) {
+    @include span(6);
+    &:nth-of-type(4n) {@include span(6 last);}
+    @include marginBottom;
+  }
+  @include breakpoint(mobileS) {
+    @include span(12);
+    &:nth-of-type(2n) {@include span(12 last);}
+    @include marginBottom;
+  }
+}
+

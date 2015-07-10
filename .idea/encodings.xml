@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="Encoding">
+  <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/MyBuildTool.js" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/src/js/es6test.es6" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/build/css/initialize.css" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/includes.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/index.html" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/js/es6/es6test.es6" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/js/es6/f1.js" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/src/scss/loooping.scss" charset="UTF-8" />
+    <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>
